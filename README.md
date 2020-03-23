@@ -21,15 +21,15 @@ This project is built with next.js, but the hyperspace loading component can als
 ## Troubleshooting
 - I changed some lines in the [Loading component](https://github.com/borispoehland/next-hyperspace-boilerplate/blob/master/pages/loading.js#L23) and somehow, the hyperdrive loading animation won't play anymore. What can I do?
 
-First, make sure you call [this when the loading is done](https://github.com/borispoehland/next-hyperspace-boilerplate/blob/26b84375a2324fbb6875f4ed8e98daab63861dee/pages/loading.js#L14) (you will have this prop automatically when wrapping the page into the <code>&lt;PageTransition&gt;</code>-component, as shown [here](https://github.com/borispoehland/next-hyperspace-boilerplate/blob/26b84375a2324fbb6875f4ed8e98daab63861dee/pages/_app.js#L17).
+First, make sure you call [this when the loading is done](https://github.com/borispoehland/next-hyperspace-boilerplate/blob/26b84375a2324fbb6875f4ed8e98daab63861dee/pages/loading.js#L14) (you will have this prop automatically when wrapping the page into the <code>&lt;PageTransition&gt;</code>-component, as shown [here](https://github.com/borispoehland/next-hyperspace-boilerplate/blob/26b84375a2324fbb6875f4ed8e98daab63861dee/pages/_app.js#L17)).
 Besides, assign [this static prop](https://github.com/borispoehland/next-hyperspace-boilerplate/blob/26b84375a2324fbb6875f4ed8e98daab63861dee/pages/loading.js#L33) to the component that is loading the content.
-Finally, return null while the state is loading, as shown [here](https://github.com/borispoehland/next-hyperspace-boilerplate/blob/26b84375a2324fbb6875f4ed8e98daab63861dee/pages/loading.js#L23)
+Finally, return null while the state is loading, as shown [here](https://github.com/borispoehland/next-hyperspace-boilerplate/blob/26b84375a2324fbb6875f4ed8e98daab63861dee/pages/loading.js#L23).
 
-- I want the charging animation to only be played if the loading time is longer than X seconds
+- I want the charging animation to only be played if the loading time is longer than <code>X</code> seconds
 
-Change the <code>loadingDelay</code>-prop as indicated [here](https://github.com/illinois/next-page-transitions#pagetransition-props)
+Change the <code>loadingDelay</code>-prop as indicated [here](https://github.com/illinois/next-page-transitions#pagetransition-props).
 
-For futher assistance, please consult [the original creator](https://github.com/illinois/next-page-transitions)
+For futher assistance, please consult [the original creator](https://github.com/illinois/next-page-transitions).
 
 
 
