@@ -6,6 +6,7 @@ Visit [https://next-hyperspace-boilerplate.now.sh/](https://next-hyperspace-boil
 
 ## Note
 This project is built with next.js, but the hyperspace loading component can also be used in a native react project.
+The hyperspace loading component was taken from [https://codepen.io/ruigewaard/pen/ikaKy](https://codepen.io/ruigewaard/pen/ikaKy), credit goes to the creator.
 
 # Features
 - Fade in/out transition when switching the page. You can alter it [here](https://github.com/borispoehland/next-hyperspace-boilerplate/blob/26b84375a2324fbb6875f4ed8e98daab63861dee/src/style.sass#L7). The transition was taken/kept from the [author's example snippet](https://github.com/illinois/next-page-transitions#getting-started)
