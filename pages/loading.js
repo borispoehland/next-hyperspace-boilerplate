@@ -11,7 +11,7 @@ const Loading = ({ pageTransitionReadyToEnter }) => {
     // simulate expensive task
     setIsLoading(true);
     timeOutId = setTimeout(() => {
-      pageTransitionReadyToEnter();
+      pageTransitionReadyToEnter(); // you need this!
       setIsLoading(false);
     }, 2000);
 
@@ -20,7 +20,7 @@ const Loading = ({ pageTransitionReadyToEnter }) => {
 
   useEffect(loadExpensiveContent, []);
 
-  return isLoading ? null : (
+  return isLoading ? null : ( // you need this!
     <div className="flex-col">
       <h1>Page is now &quot;loaded&quot;</h1>
       <Link href="/">
@@ -30,7 +30,7 @@ const Loading = ({ pageTransitionReadyToEnter }) => {
   );
 };
 
-Loading.pageTransitionDelayEnter = true;
+Loading.pageTransitionDelayEnter = true; // you need this!
 
 Loading.propTypes = {
   pageTransitionReadyToEnter: PropTypes.func,
