@@ -1,0 +1,43 @@
+import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import Link from 'next/link';
+
+let timeOutId;
+
+const Loading = ({ pageTransitionReadyToEnter }) => {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const loadExpensiveContent = () => {
+    // simulate expensive task
+    setIsLoading(true);
+    timeOutId = setTimeout(() => {
+      pageTransitionReadyToEnter();
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timeOutId);
+  };
+
+  useEffect(loadExpensiveContent, []);
+
+  return isLoading ? null : (
+    <div className="flex-col">
+      <h1>Page is now &quot;loaded&quot;</h1>
+      <Link href="/">
+        <button type="button">Back to home</button>
+      </Link>
+    </div>
+  );
+};
+
+Loading.pageTransitionDelayEnter = true;
+
+Loading.propTypes = {
+  pageTransitionReadyToEnter: PropTypes.func,
+};
+
+Loading.defaultProps = {
+  pageTransitionReadyToEnter: () => {},
+};
+
+export default Loading;
