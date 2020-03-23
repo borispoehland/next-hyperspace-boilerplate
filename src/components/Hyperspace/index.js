@@ -6,6 +6,8 @@ import './style.sass';
 let $canvas;
 let $body;
 
+// credits to https://codepen.io/ruigewaard/pen/ikaKy
+
 const animateHyperspace = () => {
   [$canvas] = $('#hyperspace');
   $canvas.width = window.innerWidth;
