@@ -5,11 +5,10 @@ import Link from 'next/link';
 let timeOutId;
 
 const Loading = ({ pageTransitionReadyToEnter }) => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const loadExpensiveContent = () => {
     // simulate expensive task
-    setIsLoading(true);
     timeOutId = setTimeout(() => {
       pageTransitionReadyToEnter(); // you need this!
       setIsLoading(false);
